@@ -1,0 +1,92 @@
+import 'package:flutter/material.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 10,
+        actions: [
+          Icon(Icons.add),
+          SizedBox(
+            width: 10,
+          )
+        ],
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/Dytto.jpg"),
+            fit: BoxFit.fitHeight,
+            ),
+          
+        ),
+        width: double.infinity,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Card(
+                elevation: 10,
+                color: Colors.blueAccent,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)),
+                child: Image.asset("assets/images/Dytto.jpg",
+                height: 100),
+                  // height: double.infinity,
+                 
+                ),
+              
+              
+        
+              Container(
+                  decoration: BoxDecoration(
+                      color: Colors.cyan,
+                      borderRadius: BorderRadius.circular(30)),
+                  padding: EdgeInsets.all(0),
+                  child: CircleAvatar(
+                    
+                    maxRadius: 100,
+                    backgroundImage: AssetImage(
+                      "assets/images/Dytto.jpg",
+                    ),
+                  )),
+              SizedBox(
+                height: 20,
+              ),
+              Card(
+                elevation: 10,
+                color: Colors.blueAccent,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)),
+                child: Image.network(
+                  "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+                  // height: double.infinity,
+                  width: 200,
+                  height: 250,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Card(
+                elevation: 10,
+                color: Colors.blueAccent,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)),
+                child: Image.network(
+                  "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+                  // height: double.infinity,
+                  width: 200,
+                  height: 250,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
